@@ -1,0 +1,72 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Mini Project</title>
+  </head>
+  <body>
+    <section id="container">
+      <!-- left section -->
+
+      <div id="preloader">
+        <img src="./Img/loader_icon.svg" alt="preloader-img" />
+      </div>
+
+      <div id="Left-sect">
+        <img src="/Img/umbrella_Blue.png" alt="umbrella-img" />
+        <span id="display-img"></span>
+      </div>
+
+      <!-- right section -->
+
+      <div id="right-sect">
+        <h1>Custom Umbrella</h1>
+
+        <div class="color-group">
+          <div
+            class="color color-blue active-color"
+            onclick="changeBodyBg('lightblue')"
+          ></div>
+          <div
+            class="color color-pink"
+            onclick="changeBodyBg('lightpink')"
+          ></div>
+          <div
+            class="color color-yellow"
+            onclick="changeBodyBg('lightyellow')"
+          ></div>
+        </div>
+
+        <div>
+          <h3>Customize your umbrella</h3>
+          <p>Upload logo for an a instance preview</p>
+          <p>.png and .jpg files only max file size 5 MB.</p>
+        </div>
+
+        <div class="btn-box">
+          <form name="myform" onsubmit="return validation()">
+            <input
+              id="file"
+              type="file"
+              name="img_up"
+              id="file"
+              accept="png/jpg"
+              hidden
+            />
+
+            <input type="submit" value="submit" hidden />
+
+            <label id="selector" for="file"> UPLOAD LOGO</label>
+
+            <img src="./Img/upload_icon.svg" alt="upload icon" />
+          </form>
+          <button class="btn"></button>
+        </div>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>

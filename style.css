@@ -1,0 +1,258 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+    background-color: lightblue;
+}
+
+/* section css start here */
+
+#container{
+height: 650px;
+width: 60%;
+margin-top: 20%;
+margin: 0 auto;
+display: flex;
+align-items: center;
+justify-content: space-between;
+object-fit: contain;
+
+}
+
+
+
+
+/* Left section css  */
+
+#Left-sect{
+    max-width: 400px;
+    max-height: 400px;
+    position: relative;
+
+}
+
+#Left-sect img{
+    object-fit: contain;
+    max-width:400px ;
+    max-height: 340px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#display-img{
+    /* border: 1px solid black; */
+    position: relative;
+    padding:0px 70px;
+    left:32%;
+    bottom:50px;
+    background-position: center;
+    background-size:contain;
+    background-repeat: no-repeat;
+}
+
+
+#preloader{
+position: fixed;
+height: 360px;
+width: 410px;
+background-color: lightblue;
+z-index: 100;
+
+}
+
+.hidden{
+    animation: hide 5s forwards;
+}
+
+@keyframes hide {
+    100%{
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+#preloader img{
+ margin: 0 auto;
+ width: 50px;
+ height: 50px;
+ margin-top: 150px;
+ margin-left:165px ;
+ animation: rotate 0.75s ease infinite ;
+ 
+}
+
+@keyframes rotate {
+    from{transform: rotate(0deg);}
+    to{transform: rotate(360deg);}
+}
+
+
+/* Right section css */
+
+
+h1{
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+p,.color-group{
+    margin-bottom: 20px;
+}
+
+
+/* css for btn-box / button */
+
+.btn-box{
+    display: flex;
+    justify-content:space-between;
+    width: 100%;
+    align-items: center;
+    padding: 6px;
+    background-color: rgb(63, 63, 235);
+    cursor: pointer;
+  border: 1px solid black;
+  border-radius: 8px;
+
+}
+
+form{
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+
+.btn-box img{
+    width: 20px;
+  margin-right: 45px;
+    
+}
+
+.btn-box span{
+display: none;
+}
+
+.btn{
+   border: transparent;
+   background: transparent;
+cursor: pointer;
+   
+}
+
+label{
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+label:hover{
+transform: scale(1.0);  
+}
+
+label.active{
+   color: black;
+}
+
+label span{
+  font-weight: normal;
+}
+
+
+
+/* css for color  */
+
+.color-group{
+    display: flex;
+}
+
+.color{
+    width: 20px;
+    height: 20px;
+    background: none;
+    border-radius: 50%;
+    margin-right: 12px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.color-blue{
+    background-color:  rgb(34, 21, 224);
+}
+
+.color-pink{
+    background-color: rgb(225, 14, 169);
+  
+}
+.color-yellow{
+    background-color: rgb(232, 236, 19);
+}
+
+.color:hover{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+
+
+ /* media queries for responsive  */
+
+@media screen and (max-width:992px) {
+    
+    #container{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        width: 60%;
+        height: 300px;
+        margin-top:20% ;
+    
+    }
+
+    #display-img{
+        position: relative;
+        padding: 0px 40px;
+        left:0%;
+        bottom: 17%;
+        background-position: center;
+        background-size:contain;
+        background-repeat: no-repeat;
+    }
+
+    #preloader{
+        position: fixed;
+     height: 210px;
+     width: 210px;
+
+     
+     }
+
+     #preloader img{
+        margin: 0 auto;
+        margin-top: 70px;
+        width: 35px;
+ height: 35px;
+     }
+
+    #Left-sect img{
+        max-width: 200px;
+        max-height: 200px;
+    }
+
+
+    #right-sect{
+        margin-top: 20px;
+    }
+
+    h1{
+        font-size: 1.5em;
+    }
+     
+    .color-group{
+       justify-content: center;
+    }
+}
