@@ -12,7 +12,7 @@ let fileInput = document.querySelector("#file");
 
 let uploaded_image = "";
 
-// 1rd --- loading/ preloader for color change/image change
+// 1st --- loading/ preloader for color change/image change
 
 let wind = window.addEventListener("load", hidden);
 
@@ -20,7 +20,7 @@ function hidden() {
   preloader.classList.add("hidden");
 }
 
-// 2st --for color buttons & change umbrella color
+// 2nd --for color buttons & change umbrella color
 
 color_Btn.forEach((color) => {
   color.addEventListener("click", () => {
@@ -63,7 +63,7 @@ function changeBodyBg(color) {
   document.body.style.background = color;
 }
 
-// 3th --- Uploaded image input on umbrella image
+// 3rd --- Uploaded image input on umbrella image
 
 fileInput.addEventListener("change", function () {
   const reader = new FileReader();
@@ -76,7 +76,7 @@ fileInput.addEventListener("change", function () {
   reader.readAsDataURL(this.files[0]);
 });
 
-// 5th--- button click upload image name show on the button
+// 4th--- button click upload image name show on the button
 
 var loader = function (e) {
   let file = e.target.files;
@@ -90,7 +90,7 @@ var loader = function (e) {
 // add event listener for InputEvent
 fileInput.addEventListener("change", loader);
 
-// 6th -- form validation only png and jpg as well as 5MB file size
+// 5th -- form validation only png and jpg as well as 5MB file size
 
 // It works fine but I didn't add
 
